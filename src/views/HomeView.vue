@@ -1,20 +1,20 @@
 <template>
   <HeaderComponent />
-  <LogoComponentVue />
+  <HeroComponent />
   <!-- <FooterComponent /> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import LogoComponentVue from '@/components/LogoComponent.vue';
+import HeroComponent from '@/components/HeroComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
     HeaderComponent,
-    LogoComponentVue,
+    HeroComponent,
     // FooterComponent
   },
 });
