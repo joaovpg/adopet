@@ -31,6 +31,7 @@ header {
     position: fixed;
     width: 100%;
     padding: 24px;
+    top: 0;
 }
 
 nav {
