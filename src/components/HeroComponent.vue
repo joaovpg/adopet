@@ -20,7 +20,7 @@ export default defineComponent({
 
 <style scoped>
 .hero {
-    margin: 168px auto;
+    margin: 168px auto 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
