@@ -16,7 +16,7 @@ export default defineComponent({
     position: relative;
     margin-top: -24px;
     background-color: #36D6AD;
-    padding: 60px;
+    padding: 40px;
     width: 100%;
 
 }

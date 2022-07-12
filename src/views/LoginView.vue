@@ -4,15 +4,12 @@
         <form>
             <div class="campos">
                 <InputComponent title="E-mail" msg="Insira seu email" />
-            </div>
-            <div class="campos">
-                
                 <InputComponent title="Senha" input="password" msg="Insira seu senha" />
             </div>
             <div>
                 <BtnHome msg="Entrar" />
             </div>
-            
+
         </form>
     </section>
     <!-- <FooterComponent /> -->
@@ -38,16 +35,6 @@ export default defineComponent({
     background-color: #fff;
     position: absolute;
     top: calc(30% - 100px);
-    
+
 }
-
-.campos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-
 </style>
