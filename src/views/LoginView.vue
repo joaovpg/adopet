@@ -7,7 +7,7 @@
                 <InputComponent title="Senha" input="password" msg="Insira seu senha" />
             </div>
             <div>
-                <BtnHome msg="Entrar" />
+                <BtnComponent msg="Entrar" />
             </div>
 
         </form>
@@ -18,13 +18,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
-import BtnHome from "../components/BtnHome.vue";
 import InputComponent from "@/components/InputComponent.vue";
+import BtnComponent from "@/components/BtnComponent.vue";
 
 
 export default defineComponent({
     name: "LoginView",
-    components: { HeaderComponent, BtnHome, InputComponent }
+    components: { HeaderComponent, InputComponent, BtnComponent }
 })
 
 </script>

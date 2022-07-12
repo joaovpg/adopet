@@ -1,6 +1,6 @@
 <template>
     <div class="btn-container">
-        <button class="btn">{{ msg }}</button>
+        <input class="btn" type="input" :href="link" :min-width="tamanho" :value="msg">
     </div>
 </template>
 
@@ -8,8 +8,11 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: 'BtnHome',
+    name: 'BtnComponent',
     props: {
+        tamanho: {
+            type: String,
+        },
         msg: {
             type: String,
         },
