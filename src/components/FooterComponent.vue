@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="container">
         <p class="footer-copyright">2022 - Desenvolvido pela dupla João e Talison</p>
     </footer>
 </template>
@@ -12,10 +12,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
-footer {
+.container {
+    position: relative;
+    margin-top: -24px;
     background-color: #36D6AD;
     padding: 60px;
     width: 100%;
+
 }
 
 .footer-copyright {

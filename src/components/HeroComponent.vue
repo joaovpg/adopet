@@ -20,7 +20,7 @@ export default defineComponent({
 
 <style scoped>
 .hero {
-    margin: 168px auto 24px;
+    margin: 0 auto 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@ export default defineComponent({
 }
 
 .hero-logo {
-    margin-bottom: 24px;
+    margin: 168px auto 24px;
 }
 
 .text-container {

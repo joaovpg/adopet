@@ -1,9 +1,11 @@
 <template>
   <HeaderComponent />
-  <HeroComponent />
-  <BtnHome msg="Já tenho uma conta" />
-  <BtnHome msg="Quero me cadastrar" />
-  <ImageComponent />
+  <div class="body-container">
+    <HeroComponent />
+    <BtnHome msg="Já tenho uma conta" />
+    <BtnHome msg="Quero me cadastrar" />
+    <ImageComponent />
+  </div>
   <FooterComponent />
 </template>
 
@@ -23,12 +25,14 @@ export default defineComponent({
     BtnHome,
     ImageComponent,
     FooterComponent
-  },
+  }
+  
+ 
 });
 </script>
 
-<style>
-body {
+<style scoped>
+.body-container {
   background-color: #3772FF;
 }
 </style>

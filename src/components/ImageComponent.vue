@@ -18,10 +18,7 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 -24px;
+    margin: 24px 0 0;
 }
 
-img {
-    z-index: -1;
-}
 </style>
