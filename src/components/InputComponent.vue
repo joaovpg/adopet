@@ -28,7 +28,7 @@ export default defineComponent({
 
 <style>
 .input-container {
-    padding: 0 24px 20px;
+    padding: 0 24px 8px;
     width: 100%;
     display: flex;
     flex-direction: column;

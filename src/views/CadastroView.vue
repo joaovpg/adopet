@@ -14,8 +14,9 @@
             <BtnComponent class="botao" link="/animais" msg="Cadastrar" />
         </form>
     </section>
-    <FooterComponent />
+    
     <!-- <BlobComponent /> -->
+    <FooterComponent />
 </template>
 
 <script lang="ts">

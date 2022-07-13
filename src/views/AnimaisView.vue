@@ -3,7 +3,24 @@
     <div class="text-container">
         <p class="text">Olá! Veja os amigos disponíveis para a adoção</p>
     </div>
-    <CardComponent />
+    <CardComponent 
+    img="AnimaisLua.png"
+    name="Lua" 
+    age="3 meses" 
+    type="Porte pequeno"
+    behavior="Ativa e carinhosa" 
+    city="Rio de Janeiro(RS)" 
+    />
+
+    <CardComponent 
+    img="AnimaisSid.png"
+    name="Paulinha" 
+    age="2 anos" 
+    type="Porte pequeno"
+    behavior="Ativa e não carinhosa" 
+    city="Rio de Janeiro(RS)" 
+    />
+
 </template>
 
 <script lang="ts">
