@@ -14,7 +14,6 @@ export default defineComponent({
 <style scoped>
 .container {
     position: relative;
-    margin-top: -24px;
     background-color: #36D6AD;
     padding: 40px;
     width: 100%;

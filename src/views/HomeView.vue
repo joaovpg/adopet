@@ -7,6 +7,7 @@
     <ImageComponent />
   </div>
   <FooterComponent />
+  <BlobComponent />
 </template>
 
 <script lang="ts">
@@ -16,6 +17,7 @@ import HeroComponent from '@/components/HeroComponent.vue';
 import BtnComponent from '@/components/BtnComponent.vue';
 import ImageComponent from '@/components/ImageComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+import BlobComponent from '@/components/BlobComponent.vue';
 
 export default defineComponent({
   name: 'HomeView',
@@ -24,7 +26,8 @@ export default defineComponent({
     HeroComponent,
     BtnComponent,
     ImageComponent,
-    FooterComponent
+    FooterComponent,
+    BlobComponent
   }
 });
 </script>

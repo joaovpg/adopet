@@ -30,28 +30,30 @@ export default defineComponent({
 header {
     position: fixed;
     width: 100%;
-    padding: 24px;
     top: 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding: 24px;
     width: 100%;
-
+    height: 295px;
+    background-image: url('@/assets/header/Forma1.svg');
+    background-repeat: no-repeat;
 }
 
 .nav-container {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     padding: 0 24px;
 }
 
 .nav-icons {}
 
 .nav-icons:last-child {
-    padding-left: 60px;
+    margin-left: 56px;
 }
 </style>

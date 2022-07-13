@@ -1,6 +1,6 @@
 <template>
-    <div class="image-container">
-        <img src="@/assets/home/ilustracao.png">
+    <div class="logo-container">
+        <img class="logo" src="@/assets/logo/Logo-azul.svg">
     </div>
 </template>
 
@@ -8,16 +8,19 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: 'ImageComponent',
+    name: 'LogoComponent',
+
 })
 </script>
 
 <style scoped>
-.image-container {
-
+.logo-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin: 24px 0 -24px;
+    margin-top: 156px;
+}
+
+.logo {
+    width: 142px;
 }
 </style>
