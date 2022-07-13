@@ -7,7 +7,7 @@
                 <InputComponent title="Senha" input="password" msg="Insira seu senha" />
             </div>
             <div>
-                <BtnComponent msg="Entrar" />
+                <BtnComponent link="/animais" msg="Entrar" />
             </div>
 
         </form>

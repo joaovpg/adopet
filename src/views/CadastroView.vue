@@ -11,7 +11,7 @@
             <InputComponent title="Nome" msg="Digite seu nome completo" />
             <InputComponent title="Senha" input="password" msg="Insira seu senha" />
             <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
-            <BtnComponent class="botao" msg="Cadastrar" />
+            <BtnComponent class="botao" link="/animais" msg="Cadastrar" />
         </form>
     </section>
     <FooterComponent />
