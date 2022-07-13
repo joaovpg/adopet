@@ -1,0 +1,40 @@
+<template>
+    <header-component />
+    <section class="formulario">
+        <form>
+            <div class="campos">
+                <InputComponent title="E-mail" msg="Insira seu email" />
+                <InputComponent title="Senha" input="password" msg="Insira seu senha" />
+            </div>
+            <div>
+                <BtnComponent msg="Entrar" />
+            </div>
+
+        </form>
+    </section>
+    <!-- <FooterComponent /> -->
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import InputComponent from "@/components/InputComponent.vue";
+import BtnComponent from "@/components/BtnComponent.vue";
+
+
+export default defineComponent({
+    name: "CadastroView",
+    components: { HeaderComponent, InputComponent, BtnComponent }
+})
+
+</script>
+
+<style scoped>
+.formulario {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(30% - 100px);
+
+}
+</style>

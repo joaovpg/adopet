@@ -1,6 +1,6 @@
 <template>
     <div class="btn-container">
-        <input class="btn" type="input" :href="link" :min-width="tamanho" :value="msg">
+        <button @click="$router.push(link)" class="btn" type="submit">{{ msg }}</button>
     </div>
 </template>
 
@@ -10,34 +10,44 @@ import { defineComponent } from "vue";
 export default defineComponent({
     name: 'BtnComponent',
     props: {
+        link: {
+            type: String,
+            default: '/'
+        },
         tamanho: {
             type: String,
         },
         msg: {
             type: String,
         },
-        link: {
-            type: String,
-        }
     }
+
 })
 </script>
 
 <style scoped>
 .btn-container {
     display: flex;
-    width: 100%;
     justify-content: center;
+    padding: 0 24px;
 }
 
 .btn {
     background-color: #FC7071;
     color: #FFF;
-    font-weight: bold;
+    font-weight: 600;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     border: none;
-    padding: 16px 24px;
+    padding: 8px 0;
     border-radius: 5px;
     margin-bottom: 16px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+    min-width: 180px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+
 }
 </style>

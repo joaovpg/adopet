@@ -2,8 +2,8 @@
   <HeaderComponent />
   <div class="body-container">
     <HeroComponent />
-    <BtnComponent link="/login" msg="Já tenho uma conta" />
-    <BtnComponent msg="Quero me cadastrar" />
+    <BtnComponent link="/login" msg="Já tenho conta" />
+    <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
     <ImageComponent />
   </div>
   <FooterComponent />
@@ -26,8 +26,6 @@ export default defineComponent({
     ImageComponent,
     FooterComponent
   }
-
-
 });
 </script>
 
