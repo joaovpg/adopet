@@ -18,7 +18,7 @@ export default defineComponent({
     height: 415px;
     position: absolute;
     right: 0;
-    top: calc(50% - 210px);
+    top: calc(65% - 210px);
     z-index: -1;
 }
 </style>
