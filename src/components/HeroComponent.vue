@@ -4,7 +4,7 @@
             <img class="hero-logo" src="@/assets/logo/Logo.svg">
         </div>
         <div class="text-container">
-            <h1 class=" hero-title">Boas-vindas!</h1>
+            <h1 class="hero-text">Boas-vindas!</h1>
             <p class="hero-text">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
         </div>
     </section>
@@ -30,19 +30,23 @@ export default defineComponent({
 
 .hero-logo {
     margin: 168px auto 24px;
-}
-
-.text-container {
-    padding: 0 56px;
-}
-
-.hero-title {
-    text-align: center;
-    margin-bottom: 24px;
+    width: 167px;
 }
 
 .hero-text {
     text-align: center;
-    margin-bottom: 24px;
+    margin-top: 16px;
+    max-width: 400px;
+}
+
+.hero-text:first-child {
+    text-align: center;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-logo {
+        margin-top: 270px;
+    }
 }
 </style>

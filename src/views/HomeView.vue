@@ -1,10 +1,15 @@
 <template>
   <HeaderComponent />
   <div class="body-container">
-    <HeroComponent />
-    <BtnComponent class="botao" link="/login" msg="Já tenho conta" />
-    <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
-    <ImageComponent />
+    <div class="home-container">
+      <HeroComponent />
+      <div class="btn-container">
+        <BtnComponent link="/login" msg="Já tenho conta" />
+        <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
+      </div>
+    </div>
+
+    <ImageComponent class="image-container" />
   </div>
   <FooterComponent />
   <BlobComponent />
@@ -35,9 +40,62 @@ export default defineComponent({
 <style scoped>
 .body-container {
   background-color: #3772FF;
+  z-index: -2;
 }
 
-.botao {
+.home-container {
+  width: 100%;
+  padding: 56px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 34px;
+}
+
+.btn-container button {
   margin-bottom: 16px;
+  min-width: 180px;
+  max-width: 344px
+}
+
+.btn-container button:last-child {
+  margin-bottom: 0;
+}
+
+.image-container {
+  margin-top: 24px;
+  margin-bottom: -45px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    width: 400px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    min-width: 362px;
+    padding: 0;
+  }
+
+  .btn-container button {
+    margin-bottom: 16px;
+  }
+
+  .image-container {
+    margin-top: 40px;
+    margin-bottom: -45px;
+  }
 }
 </style>

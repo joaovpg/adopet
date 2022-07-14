@@ -14,10 +14,8 @@ export default defineComponent({
 
 <style scoped>
 .image-container {
-
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 24px 0 -24px;
 }
 </style>

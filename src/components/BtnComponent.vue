@@ -1,7 +1,5 @@
 <template>
-    <div class="btn-container">
-        <button @click="$router.push(link)" class="btn" type="submit">{{ msg }}</button>
-    </div>
+    <button @click="$router.push(link)" class="btn" type="submit">{{ msg }}</button>
 </template>
 
 <script lang="ts">
@@ -26,12 +24,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.btn-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 24px;
-}
-
 .btn {
     background-color: #FC7071;
     color: #FFF;
@@ -41,7 +33,7 @@ export default defineComponent({
     padding: 8px 0;
     border-radius: 5px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
-    min-width: 180px;
+    width: 100%;
 }
 
 .btn:hover {
