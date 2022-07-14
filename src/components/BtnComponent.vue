@@ -40,7 +40,6 @@ export default defineComponent({
     border: none;
     padding: 8px 0;
     border-radius: 5px;
-    margin-bottom: 16px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
     min-width: 180px;
 }

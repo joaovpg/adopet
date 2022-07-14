@@ -1,30 +1,20 @@
 <template>
     <header-component />
-
+    <LogoComponent class="logo" />
+    <div class="title">
+        <TextComponent text="Já tem conta? Faça seu login:" />
+    </div>
     <section class="formulario">
-        <LogoComponent />
-        <div class="title">
-            <p>Já tem conta? Faça seu login:</p>
-        </div>
-
         <form>
-            <div class="campos">
-
-                <InputComponent title="E-mail" msg="Insira seu email" />
-                <InputComponent title="Senha" input="password" msg="Insira seu senha" />
-            </div>
-            <div>
-
-
-                <!-- Componente Redirect em Testes -->
-                <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" />
-                <BtnComponent link="/animais" msg="Entrar" />
-            </div>
-
+            <InputComponent title="E-mail" msg="Insira seu email" />
+            <InputComponent title="Senha" input="password" msg="Insira seu senha" />
+            <!-- Componente Redirect em Testes -->
+            <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" />
+            <BtnComponent link="/animais" msg="Entrar" />
         </form>
     </section>
-    <!-- <BlobComponent /> -->
-    <!-- <FooterComponent /> -->
+    <BlobComponent />
+    <FooterComponent class="footer" />
 </template>
 
 <script lang="ts">
@@ -36,6 +26,7 @@ import BlobComponent from "@/components/BlobComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 import RedirectComponent from "@/components/RedirectComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import TextComponent from "@/components/TextComponent.vue";
 
 
 export default defineComponent({
@@ -46,8 +37,9 @@ export default defineComponent({
         BtnComponent,
         LogoComponent,
         RedirectComponent,
-        // FooterComponent
-
+        FooterComponent,
+        BlobComponent,
+        TextComponent
     }
 })
 
@@ -62,18 +54,12 @@ export default defineComponent({
     margin-bottom: 42px;
 }
 
-.title p {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
+.logo {
+    margin-top: 156px;
+    width: 100%;
+}
 
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-
-    color: #3772FF;
+.footer {
+    margin-top: 247px;
 }
 </style>

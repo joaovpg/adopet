@@ -19,6 +19,6 @@ export default defineComponent({
     position: absolute;
     right: 0;
     top: calc(50% - 210px);
-    z-index: 0;
+    z-index: -1;
 }
 </style>

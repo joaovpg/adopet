@@ -28,7 +28,7 @@ export default defineComponent({
 
 <style>
 .input-container {
-    padding: 0 24px 8px;
+    padding: 0 24px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,6 +45,7 @@ export default defineComponent({
     background-color: #F6F6F6;
     border: none;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
     color: #BCBCBC;
     display: block;
     font-size: 12px;

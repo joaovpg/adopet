@@ -1,11 +1,11 @@
 <template>
     <header-component />
-    <LogoComponent />
+    <LogoComponent class="logo-component" />
     <div class="text-container">
-        <p class="text">Ainda não tem cadastro?</p>
-        <p class="text">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+        <TextComponent text="Ainda não tem cadastro?" />
+        <TextComponent text="Então, antes de buscar seu melhor amigo, precisamos de alguns dados:" />
     </div>
-    <section class="formulario">
+    <section>
         <form>
             <InputComponent title="E-mail" msg="Escolha seu melhor e-mail" />
             <InputComponent title="Nome" msg="Digite seu nome completo" />
@@ -14,9 +14,8 @@
             <BtnComponent class="botao" link="/animais" msg="Cadastrar" />
         </form>
     </section>
-    
-    <!-- <BlobComponent /> -->
-    <FooterComponent />
+    <BlobComponent />
+    <FooterComponent class="footer" />
 </template>
 
 <script lang="ts">
@@ -27,6 +26,7 @@ import BtnComponent from "@/components/BtnComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BlobComponent from "@/components/BlobComponent.vue";
+import TextComponent from "@/components/TextComponent.vue";
 
 
 export default defineComponent({
@@ -37,26 +37,31 @@ export default defineComponent({
         BtnComponent,
         LogoComponent,
         FooterComponent,
-        // BlobComponent
+        BlobComponent,
+        TextComponent
     }
 })
 
 </script>
 
 <style scoped>
+body {
+    background-color: none;
+}
+
+.logo-component {
+    margin-top: 156px;
+}
+
 .text-container {
     padding: 24px;
 }
 
-.text {
-    color: #3772FF;
-    font-size: 16px;
-    text-align: center;
-    line-height: 21px;
-}
-
 .botao {
     margin-top: 4px;
-    margin-bottom: 60px;
+}
+
+.footer {
+    margin-top: 106px;
 }
 </style>

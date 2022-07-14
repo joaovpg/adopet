@@ -2,7 +2,7 @@
   <HeaderComponent />
   <div class="body-container">
     <HeroComponent />
-    <BtnComponent link="/login" msg="Já tenho conta" />
+    <BtnComponent class="botao" link="/login" msg="Já tenho conta" />
     <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
     <ImageComponent />
   </div>
@@ -35,5 +35,9 @@ export default defineComponent({
 <style scoped>
 .body-container {
   background-color: #3772FF;
+}
+
+.botao {
+  margin-bottom: 16px;
 }
 </style>

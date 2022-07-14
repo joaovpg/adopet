@@ -1,6 +1,6 @@
 <template>
     <div class="logo-container">
-        <img class="logo" src="@/assets/logo/Logo-azul.svg">
+        <img class="logo" alt="Imagem da logo do Adopet" src="@/assets/logo/Logo-azul.svg">
     </div>
 </template>
 
@@ -17,7 +17,6 @@ export default defineComponent({
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-top: 156px;
 }
 
 .logo {
