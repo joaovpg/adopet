@@ -7,10 +7,12 @@
     </div>
     <section>
         <form>
-            <InputComponent title="E-mail" msg="Escolha seu melhor e-mail" />
-            <InputComponent title="Nome" msg="Digite seu nome completo" />
-            <InputComponent title="Senha" input="password" msg="Insira seu senha" />
-            <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
+            <div class="input-container">
+                <InputComponent title="E-mail" msg="Escolha seu melhor e-mail" />
+                <InputComponent title="Nome" msg="Digite seu nome completo" />
+                <InputComponent title="Senha" input="password" msg="Insira seu senha" />
+                <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
+            </div>
             <BtnComponent class="botao" link="/animais" msg="Cadastrar" />
         </form>
     </section>
@@ -53,12 +55,17 @@ body {
     margin-top: 156px;
 }
 
+
 .text-container {
     padding: 24px;
 }
 
-.botao {
-    margin-top: 4px;
+.input-container div {
+    margin-bottom: 20px;
+}
+
+.input-container div:last-child {
+    margin-bottom: 24px;
 }
 
 .footer {
