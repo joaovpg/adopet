@@ -30,7 +30,7 @@ export default defineComponent({
 
 .hero-logo {
     margin: 168px auto 24px;
-    width: 167px;
+    width: 187px;
 }
 
 .text-container {
