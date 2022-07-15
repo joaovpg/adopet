@@ -22,12 +22,13 @@ export default defineComponent({
     z-index: -1;
 }
 
-@media screen and (min-width: 778px) {
+@media screen and (min-width: 768px) {
     .blob {
         width: 130px;
         height: 664px;
         background-size: 130px 664px;
         top: 20%;
+        right: 0;
     }
 }
 </style>

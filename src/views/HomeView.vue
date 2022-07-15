@@ -1,14 +1,11 @@
 <template>
   <HeaderComponent />
-  <div class="body-container">
-    <div class="home-container">
-      <HeroComponent />
-      <div class="btn-container">
-        <BtnComponent link="/login" msg="Já tenho conta" />
-        <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
-      </div>
+  <div class="home-container">
+    <HeroComponent />
+    <div class="btn-container">
+      <BtnComponent link="/login" msg="Já tenho conta" />
+      <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
     </div>
-
     <ImageComponent class="image-container" />
   </div>
   <FooterComponent />
@@ -42,12 +39,10 @@ body {
   background-color: #3772FF;
 }
 
-.body-container {}
-
 .home-container {
   width: 100%;
   padding: 56px;
-  margin-top: 98px;
+  margin: 98px 0 -30px 0;
 }
 
 .btn-container {
@@ -101,7 +96,7 @@ body {
   .home-container {
     width: 488px;
     padding: 0;
-    margin: 36px auto;
+    margin: 36px auto -30px;
   }
 
   .btn-container {

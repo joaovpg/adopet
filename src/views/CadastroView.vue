@@ -1,4 +1,6 @@
 <template>
+    <BlobComponent />
+    <PawsComponent />
     <header-component />
     <LogoComponent class="logo-component" />
     <div class="text-container">
@@ -18,7 +20,6 @@
             </div>
         </form>
     </section>
-    <BlobComponent />
     <FooterComponent class="footer" />
 </template>
 
@@ -31,6 +32,7 @@ import LogoComponent from "@/components/LogoComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import BlobComponent from "@/components/BlobComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
+import PawsComponent from "@/components/PawsComponent.vue";
 
 
 export default defineComponent({
@@ -42,7 +44,8 @@ export default defineComponent({
         LogoComponent,
         FooterComponent,
         BlobComponent,
-        TextComponent
+        TextComponent,
+        PawsComponent
     }
 })
 
@@ -62,11 +65,12 @@ body {
     padding: 0 34px;
 }
 
-.btn-container button{
+.btn-container button {
     min-width: 148px;
     max-width: 148px;
     height: 40px;
 }
+
 .logo-component {
     margin-top: 156px;
 }

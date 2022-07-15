@@ -17,6 +17,7 @@
         </form>
     </section>
     <BlobComponent />
+    <PawsComponent />
     <FooterComponent class="footer" />
 </template>
 
@@ -30,6 +31,7 @@ import LogoComponent from "@/components/LogoComponent.vue";
 import RedirectComponent from "@/components/RedirectComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
+import PawsComponent from "@/components/PawsComponent.vue";
 
 
 export default defineComponent({
@@ -42,7 +44,8 @@ export default defineComponent({
         RedirectComponent,
         FooterComponent,
         BlobComponent,
-        TextComponent
+        TextComponent,
+        PawsComponent
     }
 })
 
@@ -75,7 +78,7 @@ export default defineComponent({
     padding: 0 34px;
 }
 
-.btn-container button{
+.btn-container button {
     min-width: 148px;
     max-width: 148px;
     height: 40px;
