@@ -13,7 +13,9 @@
                 <InputComponent title="Senha" input="password" msg="Insira seu senha" />
                 <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
             </div>
-            <BtnComponent class="botao" link="/animais" msg="Cadastrar" />
+            <div class="btn-container">
+                <BtnComponent link="/animais" msg="Cadastrar" />
+            </div>
         </form>
     </section>
     <BlobComponent />
@@ -51,6 +53,20 @@ body {
     background-color: none;
 }
 
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 34px;
+}
+
+.btn-container button{
+    min-width: 148px;
+    max-width: 148px;
+    height: 40px;
+}
 .logo-component {
     margin-top: 156px;
 }

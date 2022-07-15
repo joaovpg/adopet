@@ -9,7 +9,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-    name: 'InputComponent',
+    name: 'FormComponent',
     props: {
         title: {
             type: String,
@@ -26,19 +26,27 @@ export default defineComponent({
 
 </script>
 
-<style scoped>
+<style>
 .input-container {
     padding: 0 24px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+     
 }
 
 .label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
     font-size: 16px;
-    margin-bottom: 4px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+
+    color: #3772FF;
+    margin-bottom: 8px;
 }
 
 .input {
@@ -49,6 +57,7 @@ export default defineComponent({
     color: #BCBCBC;
     display: block;
     font-size: 12px;
+    height: 48px;
     outline: 0;
     padding: 8px 0;
     text-align: center;

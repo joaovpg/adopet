@@ -10,7 +10,10 @@
             <InputComponent title="Senha" input="password" msg="Insira seu senha" />
             <!-- Componente Redirect em Testes -->
             <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" />
-            <BtnComponent link="/animais" msg="Entrar" />
+            <div class="btn-container">
+                <BtnComponent link="/animais" msg="Entrar" />
+            </div>
+
         </form>
     </section>
     <BlobComponent />
@@ -61,5 +64,20 @@ export default defineComponent({
 
 .footer {
     margin-top: 247px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 34px;
+}
+
+.btn-container button{
+    min-width: 148px;
+    max-width: 148px;
+    height: 40px;
 }
 </style>
