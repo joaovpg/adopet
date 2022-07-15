@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="#" class="isLoggedIn">
                     <img src="@/assets/header/Usuario.png" width="40px">
                 </a>
             </div>
@@ -65,6 +65,10 @@ nav {
 
 .nav-icons:first-child {
     margin-right: 0;
+}
+
+.isLoggedIn {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {

@@ -40,7 +40,6 @@ export default defineComponent({
 <style scoped>
 .body-container {
   background-color: #3772FF;
-  z-index: -2;
 }
 
 .home-container {
@@ -74,7 +73,7 @@ export default defineComponent({
 
 @media screen and (min-width: 768px) {
   .home-container {
-    width: 400px;
+    width: 344px;
     padding: 0;
     margin: 0 auto;
   }
@@ -85,7 +84,7 @@ export default defineComponent({
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    min-width: 362px;
+    min-width: 344px;
     padding: 0;
   }
 
