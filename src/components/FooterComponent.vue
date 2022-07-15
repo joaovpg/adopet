@@ -25,4 +25,10 @@ export default defineComponent({
     font-size: 16px;
     text-align: center;
 }
+
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 30px;
+    }
+}
 </style>

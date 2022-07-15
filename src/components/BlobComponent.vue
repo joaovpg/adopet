@@ -18,7 +18,16 @@ export default defineComponent({
     height: 415px;
     position: absolute;
     right: 0;
-    top: calc(65% - 210px);
+    top: 25%;
     z-index: -1;
+}
+
+@media screen and (min-width: 778px) {
+    .blob {
+        width: 130px;
+        height: 664px;
+        background-size: 130px 664px;
+        top: 20%;
+    }
 }
 </style>

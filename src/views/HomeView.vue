@@ -37,14 +37,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.body-container {
+<style>
+body {
   background-color: #3772FF;
 }
+
+.body-container {}
 
 .home-container {
   width: 100%;
   padding: 56px;
+  margin-top: 98px;
 }
 
 .btn-container {
@@ -75,14 +78,10 @@ export default defineComponent({
   .home-container {
     width: 344px;
     padding: 0;
-    margin: 0 auto;
+    margin: 180px auto 0;
   }
 
   .btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
     min-width: 344px;
     padding: 0;
@@ -95,6 +94,18 @@ export default defineComponent({
   .image-container {
     margin-top: 40px;
     margin-bottom: -45px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home-container {
+    width: 488px;
+    padding: 0;
+    margin: 36px auto;
+  }
+
+  .btn-container {
+    max-width: 362px;
   }
 }
 </style>

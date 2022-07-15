@@ -5,7 +5,8 @@
         </div>
         <div class="text-container">
             <h1 class="hero-title">Boas-vindas!</h1>
-            <p class="hero-text">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+            <p class="hero-text">Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!
+            </p>
         </div>
     </section>
 </template>
@@ -20,21 +21,22 @@ export default defineComponent({
 
 <style scoped>
 .hero {
-    margin: 0 auto 24px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #FFF;
+
 }
 
 .hero-logo {
-    margin: 168px auto 24px;
     width: 187px;
 }
 
 .text-container {
     text-align: center;
+    margin: 24px auto;
 }
 
 .hero-title {
@@ -46,19 +48,17 @@ export default defineComponent({
 
 .hero-text {
     margin-top: 16px;
-    max-width: 400px;
     line-height: 24px;
 }
 
 
 @media screen and (min-width: 768px) {
-    .hero {
-        margin-bottom: 38px;
+    .hero-logo {
+        width: 252px;
     }
 
-    .hero-logo {
-        margin: 274px auto 40px;
-        width: 252px;
+    .text-container {
+        margin: 40px 0 38px 0;
     }
 
     .hero-title {
@@ -70,6 +70,21 @@ export default defineComponent({
         margin-top: 24px;
         line-height: 26px;
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero {
+        margin-bottom: 0;
+    }
+
+    .text-container {
+        margin: 40px 0 32px 0;
+    }
+
+
+    .hero-logo {
+        width: 260px;
     }
 }
 </style>
