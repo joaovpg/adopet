@@ -43,10 +43,8 @@ export default defineComponent({
 }
 
 .header-container {
-    width: 100%;
+    max-width: 252px;
     top: 0;
-    margin: 0 auto;
-    max-width: 1120px;
 }
 
 nav {
@@ -104,6 +102,10 @@ nav {
 @media screen and (min-width: 1440px) {
     nav {
         margin-left: 0;
+    }
+
+    .header-container {
+        margin-left: 160px;
     }
 
     .nav-container {
