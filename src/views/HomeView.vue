@@ -30,14 +30,25 @@ export default defineComponent({
     ImageComponent,
     FooterComponent,
     BlobComponent
+  },
+  beforeRouteEnter(){
+    document.body.style.backgroundColor = '#3772FF'
+  },
+  beforeRouteLeave(){
+    document.body.style.backgroundColor = '#FFF'
   }
+
+//   mounted() {
+//   document.body.style.backgroundColor = '#3772FF'
+// }, unmounted() {
+//   document.body.style.backgroundColor = '#3772FF'
+// }
+
+
 });
 </script>
 
-<style>
-body {
-  background-color: #3772FF;
-}
+<style scoped>
 
 .home-container {
   width: 100%;

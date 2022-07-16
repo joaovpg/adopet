@@ -3,6 +3,7 @@
 </template>
 
 
+
 <style>
 * {
   box-sizing: border-box;
@@ -11,5 +12,6 @@
   font-family: 'Poppins', sans-serif;
 
 }
+
 </style>
 
