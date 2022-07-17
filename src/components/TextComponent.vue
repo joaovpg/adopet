@@ -21,6 +21,6 @@ export default defineComponent({
     color: #3772FF;
     font-size: 16px;
     text-align: center;
-    line-height: 21px;
+    line-height: 20px;
 }
 </style>

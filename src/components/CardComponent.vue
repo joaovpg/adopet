@@ -1,25 +1,24 @@
 <template>
-    <div class="card-container">
-        <div class="card">
+    <div class="card">
+        <div class="card-row">
             <div class="imgBox">
-                <!-- <img class="img" src="@/assets/animais/AnimaisLua.png"> -->
                 <img class="img" :src="resolve_img_url(img)" />
-           </div>
-            <div class="content">
-                <p class="name">{{name}}</p>
-                <p>{{age}}</p>
-                <p>{{type}}</p>
-                <p>{{behavior}}</p>
+            </div>
+            <div class="info">
+                <h1 class="name">{{ name }}</h1>
+                <p>{{ age }}</p>
+                <p>{{ type }}</p>
+                <p>{{ behavior }}</p>
 
                 <div class="local">
-                    <p>{{city}}</p>
-                    <p>
+                    <p>{{ city }}</p>
+                    <a href="#" class="local-info">
                         <img src="@/assets/animais/IconeMensagem.png">
-                        Falar com responsável
-                    </p>
+                        <p>Falar com responsável</p>
+                    </a>
                 </div>
-
             </div>
+
         </div>
     </div>
 </template>
@@ -50,101 +49,82 @@ export default defineComponent({
     },
     methods: {
         resolve_img_url: function (path: any) {
-      let images = require.context('../assets/animais/', false, /\.png$|\.jpg$/)
-      return images("./"+path)
-    },
-}})
+            let images = require.context('../assets/animais/', false, /\.png$|\.jpg$/)
+            return images("./" + path)
+        },
+    }
+})
 </script>
 
 <style scoped>
-.card-container {
+.card {
+    background-color: #F6F6F6;
+    padding: 24px;
+    margin: 0 auto 16px auto;
+    max-width: 360px;
+}
 
-    /* background-color: #F6F6F6;
-    height: 196px;
-    width: 100%; */
+.card:last-child {
+    margin-bottom: 0;
+}
 
-    position: relative;
-    width: 100%;
-    height: 196px;
+.card-row {
+    min-width: 312px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
 }
 
-
-.card-container .card {
-    position: relative;
-    background-color: #F6F6F6;
-    padding: 16px;
-    display: flex;
-}
-
-.card{
+.imgBox {
     width: 100%;
-}
-
-
-.card-container .card .imgBox {
     max-width: 148px;
-    flex: 0 0 148px;
 }
 
-.card-container .card .imgBox img {
-    max-width: 100%;
-
+.imgBox img {
+    max-width: 148px;
 }
 
-.card-container .card .content {
-    margin-left: 16px;
-}
-
-p {
-    display: flex;
-    align-items: center;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
+.info {
+    min-width: 148px;
     line-height: 20px;
-    color: #737380;
 }
 
 .name {
-    width: 154px;
-    height: 24px;
     margin-bottom: 8px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
-
-    display: flex;
-    align-items: center;
-
     color: #3772FF;
+}
 
+p {
+    font-size: 14px;
+    color: #737380;
 }
 
 .local {
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
-.local p:first-child {
+.local {
     font-size: 12px;
-    margin-bottom: 7px;
-    
 }
 
-.local p:last-child{
+.local>p {
+    margin-bottom: 8px;
+}
+
+.local-info {
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.local-info p {
     font-size: 10px;
-    
 }
 
-.local img {
+.local-info img {
     margin-right: 6px;
 }
 </style>
