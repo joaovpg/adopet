@@ -3,7 +3,7 @@
   <div class="home-container">
     <HeroComponent />
     <div class="btn-container">
-      <BtnComponent link="/login" msg="Já tenho conta" />
+      <BtnComponent link="/catalogo" msg="Já tenho conta" />
       <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
     </div>
     <ImageComponent class="image-container" />
@@ -31,25 +31,16 @@ export default defineComponent({
     FooterComponent,
     BlobComponent
   },
-  beforeRouteEnter(){
+  beforeRouteEnter() {
     document.body.style.backgroundColor = '#3772FF'
   },
-  beforeRouteLeave(){
+  beforeRouteLeave() {
     document.body.style.backgroundColor = '#FFF'
   }
-
-//   mounted() {
-//   document.body.style.backgroundColor = '#3772FF'
-// }, unmounted() {
-//   document.body.style.backgroundColor = '#3772FF'
-// }
-
-
 });
 </script>
 
 <style scoped>
-
 .home-container {
   width: 100%;
   padding: 56px;

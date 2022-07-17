@@ -14,8 +14,8 @@
                 </a>
             </div>
             <div>
-                <a href="#" class="isLoggedIn">
-                    <img src="@/assets/header/Usuario.png" width="40px">
+                <a href="#" :style="{ display: isLoggedIn }">
+                    <img class="login-icon" src="@/assets/header/Usuario.png">
                 </a>
             </div>
         </nav>
@@ -26,7 +26,16 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    computed: {
+        isLoggedIn() {
+            if (window.location.hash == '#/catalogo') {
+                return 'block';
+            } else {
+                return 'none';
+            }
+        }
+    }
 });
 </script>
 
@@ -42,17 +51,13 @@ export default defineComponent({
     z-index: -1;
 }
 
-.header-container {
-    max-width: 252px;
-    top: 0;
-}
+.header-container {}
 
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 48px;
-    margin-left: 48px;
+    align-items: center;
+    margin: 48px 48px 0 48px;
 }
 
 .logo {
@@ -75,8 +80,8 @@ nav {
     margin-right: 0;
 }
 
-.isLoggedIn {
-    display: none;
+.login-icon {
+    width: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,10 +107,12 @@ nav {
 @media screen and (min-width: 1440px) {
     nav {
         margin-left: 0;
+        margin-right: 0;
     }
 
     .header-container {
         margin-left: 160px;
+        margin-right: 160px;
     }
 
     .nav-container {

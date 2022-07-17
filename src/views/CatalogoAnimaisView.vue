@@ -4,7 +4,7 @@
         <TextComponent text="Olá! Veja os amigos disponíveis para a adoção" />
     </div>
     <CardList />
-    <FooterComponent />
+    <FooterComponent class="footer-container" />
 </template>
 
 <script lang="ts">
@@ -31,6 +31,10 @@ export default defineComponent({
     padding: 0 62px;
 }
 
+.footer-container {
+    margin-top: calc(60px - 16px);
+}
+
 @media screen and (min-width: 768px) {
     .text-container {
         margin: 188px 0 32px 0;
@@ -41,5 +45,6 @@ export default defineComponent({
     .text-container {
         margin: 102px 0 40px 0;
     }
+
 }
 </style>

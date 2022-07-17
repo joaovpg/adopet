@@ -16,7 +16,7 @@
                 <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
             </div>
             <div class="btn-container">
-                <BtnComponent link="/animais" msg="Cadastrar" />
+                <BtnComponent link="/catalogo" msg="Cadastrar" />
             </div>
         </form>
     </section>

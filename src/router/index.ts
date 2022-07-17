@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     component: CadastroView
   },
   {
-    path: '/animais',
+    path: '/catalogo',
     component: CatalogoAnimaisView
   },
   {
