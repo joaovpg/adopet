@@ -64,10 +64,6 @@ export default defineComponent({
     max-width: 360px;
 }
 
-.card:last-child {
-    margin-bottom: 0;
-}
-
 .card-row {
     min-width: 312px;
     display: flex;
@@ -103,9 +99,6 @@ p {
 
 .local {
     margin-top: 34px;
-}
-
-.local {
     font-size: 12px;
 }
 
@@ -126,5 +119,21 @@ p {
 
 .local-info img {
     margin-right: 6px;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        padding: 16px;
+        margin: 0 0 16px 0;
+        max-width: 344px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        padding: 24px;
+        margin: 0 0 16px 0;
+        min-width: 363px;
+    }
 }
 </style>

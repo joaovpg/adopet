@@ -30,4 +30,16 @@ export default defineComponent({
     margin: 82px 0 32px 0;
     padding: 0 62px;
 }
+
+@media screen and (min-width: 768px) {
+    .text-container {
+        margin: 188px 0 32px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .text-container {
+        margin: 102px 0 40px 0;
+    }
+}
 </style>

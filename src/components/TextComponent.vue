@@ -23,4 +23,10 @@ export default defineComponent({
     text-align: center;
     line-height: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .text {
+        font-size: 18px;
+    }
+}
 </style>
