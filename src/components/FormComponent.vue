@@ -26,13 +26,13 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 .input-container {
     padding: 0 24px;
     width: 100%;
     display: flex;
     flex-direction: column;
-     
+
 }
 
 .label {
