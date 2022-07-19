@@ -22,4 +22,16 @@ export default defineComponent({
 .logo {
     width: 142px;
 }
+
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 252px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        width: 260px;
+    }
+}
 </style>

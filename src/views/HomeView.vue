@@ -1,13 +1,13 @@
 <template>
   <HeaderComponent />
-  <div class="home-container">
+  <main class="home-container">
     <HeroComponent />
     <div class="btn-container">
       <BtnComponent link="/catalogo" msg="Já tenho conta" />
       <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
     </div>
     <ImageComponent class="image-container" />
-  </div>
+  </main>
   <FooterComponent />
   <BlobComponent />
 </template>
