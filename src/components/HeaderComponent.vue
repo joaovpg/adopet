@@ -13,10 +13,17 @@
                     <img src="@/assets/header/Mensagens.svg">
                 </a>
             </div>
-            <div>
-                <a href="#" :style="{ display: isLoggedIn }">
+            <div class="login-icon">
+                <!-- <a href="#" :style="{ display: isLoggedIn }">
                     <img class="login-icon" src="@/assets/header/Usuario.png">
-                </a>
+                </a> -->
+                <div v-if="userLogin()">
+                    <LogoPerfilComponent :logado=false />
+                </div>
+                  <div v-else>
+                    <LogoPerfilComponent :logado=true />
+                </div>
+                    
             </div>
         </nav>
     </header>
@@ -24,9 +31,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import LogoPerfilComponent from './LogoPerfilComponent.vue';
 
 export default defineComponent({
     name: 'HeaderComponent',
+    components: {
+        LogoPerfilComponent
+    },
+    props: {
+        usuario: {
+            type: Boolean,
+            
+        }
+    },
     computed: {
         isLoggedIn() {
             if (window.location.hash == '#/catalogo') {
@@ -35,7 +52,13 @@ export default defineComponent({
                 return 'none';
             }
         }
+    },
+     methods: {
+        userLogin() {
+            return this.usuario === false
+        }
     }
+   
 });
 </script>
 
@@ -82,6 +105,7 @@ nav {
 
 .login-icon {
     width: 40px;
+    
 }
 
 @media screen and (min-width: 768px) {

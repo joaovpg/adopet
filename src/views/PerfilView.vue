@@ -1,20 +1,21 @@
 <template>
-    <HeaderComponent :usuario=true />
+    <HeaderComponent :usuario="true" />
     <main class="mensagem-container">
         <div class="text-container">
             <TextComponent class="titulo"
-                text="Envie uma mensagem para a pessoa ou instituição que está cuidado do animal:" />
+                text="Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem." />
         </div>
         <section class="form-container">
             <form>
                 <div class="input-container">
-                    <FormComponent title="Nome" msg="Insira seu nome completo" />
-                    <FormComponent title="Telefone" msg="Insira seu telefone e/ou whatsapp" />
-                    <FormComponent title="Nome do animal" msg="Por qual animal você se interessou?" />
-                    <FormComponent :textArea="true" title="Mensagem" msg="Escreva sua mensagem" />
+                    <FormComponent title="Nome" msg="Joana Magalhães" />
+                    <FormComponent title="Telefone" msg="55 11 xxxxx xxxx" />
+                    <FormComponent title="Cidade" msg="São Paulo" />
+                    <FormComponent :textArea="true" title="Sobre" 
+                    msg="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati." />
                 </div>
                 <div class="input-area">
-                    <BtnComponent class="botao" msg="Enviar" />
+                    <BtnComponent class="botao" msg="Salvar" />
                 </div>
             </form>
         </section>
@@ -31,7 +32,7 @@ import TextComponent from "@/components/TextComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 export default defineComponent({
-    name: 'MensagemView',
+    name: 'PerfilView',
     components: {
         FormComponent,
         BtnComponent,
