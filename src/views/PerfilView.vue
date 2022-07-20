@@ -2,8 +2,7 @@
     <HeaderComponent :usuario="true" />
     <main class="mensagem-container">
         <div class="text-container">
-            <TextComponent class="titulo"
-                text="Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem." />
+            <TextComponent text="Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem." />
         </div>
         <section class="form-container">
             <form>
@@ -14,12 +13,13 @@
                     <FormComponent :textArea="true" title="Sobre"
                         msg="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati." />
                 </div>
-                <div class="input-area">
-                    <BtnComponent class="botao" msg="Salvar" />
+                <div class="btn-container">
+                    <BtnComponent msg="Salvar" />
                 </div>
             </form>
         </section>
     </main>
+    <BlobComponent />
     <FooterComponent />
 </template>
 
@@ -30,6 +30,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import BlobComponent from "@/components/BlobComponent.vue";
 
 export default defineComponent({
     name: 'PerfilView',
@@ -38,48 +39,67 @@ export default defineComponent({
         BtnComponent,
         HeaderComponent,
         TextComponent,
-        FooterComponent
+        FooterComponent,
+        BlobComponent
     }
 })
 </script>
 
 <style scoped>
 .mensagem-container {
-    max-width: 360px;
+    max-width: 548px;
+    margin: 100px auto 16px auto;
+    padding: 0 24px;
 }
 
 .text-container {
-    /* margin-top: 168px; */
-    width: 226px;
-    margin: 100px 67px auto;
+    padding: 0 33px;
+    margin-bottom: 24px;
 }
 
 .form-container {
-    display: flex;
     background: #F7F7F7;
-    /* background: red; */
     border-radius: 10px;
-    margin: 24px;
     padding: 32px 16px;
 }
 
-.form-container form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .input-container {
-    width: 100%;
+    margin-bottom: 16px;
 }
 
+.input-container:last-child {
+    margin-bottom: 32px;
+}
 
+.btn-container {
+    max-width: 164px;
+    margin: 0 auto;
 
+}
 
-.botao {
-    margin-top: 32px;
-    width: 148px;
+@media screen and (min-width: 768px) {
+    .mensagem-container {
+        max-width: 524px;
+        margin: 185px auto 32px auto;
+        padding: 0;
+    }
 
+    .text-container {
+        padding: 0;
+        margin-bottom: 32px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .mensagem-container {
+        max-width: 552px;
+        margin: 86px auto 32px auto;
+        padding: 0;
+    }
+
+    .form-container {
+        padding: 32px 30px;
+    }
 }
 </style>

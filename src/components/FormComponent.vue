@@ -83,7 +83,6 @@ export default defineComponent({
 
 .textarea {
     background-color: #FFFFFF;
-    mix-blend-mode: normal;
     border: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
