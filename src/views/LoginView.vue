@@ -1,21 +1,26 @@
 <template>
     <header-component />
-    <LogoComponent class="logo" />
-    <div class="title">
-        <TextComponent text="Já tem conta? Faça seu login:" />
-    </div>
-    <section class="formulario">
-        <form>
-            <InputComponent title="E-mail" msg="Insira seu email" />
-            <InputComponent title="Senha" input="password" msg="Insira seu senha" />
-            <!-- Componente Redirect em Testes -->
-            <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" />
-            <div class="btn-container">
-                <BtnComponent link="/animais" msg="Entrar" />
-            </div>
-
-        </form>
-    </section>
+    <main class="login-container">
+        <LogoComponent />
+        <div class="text-container">
+            <TextComponent text="Já tem conta? Faça seu login:" />
+        </div>
+        <section>
+            <form>
+                <div class="form-container">
+                    <InputComponent title="E-mail" msg="Insira seu email" />
+                    <div class="password-container">
+                        <InputComponent title="Senha" input="password" msg="Insira seu senha" />
+                        <!-- Componente Redirect em Testes -->
+                        <!-- <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" /> -->
+                    </div>
+                    <div class="btn-container">
+                        <BtnComponent link="/animais" msg="Entrar" />
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
     <BlobComponent />
     <PawsComponent />
     <FooterComponent class="footer" />
@@ -41,7 +46,7 @@ export default defineComponent({
         InputComponent,
         BtnComponent,
         LogoComponent,
-        RedirectComponent,
+        // RedirectComponent,
         FooterComponent,
         BlobComponent,
         TextComponent,
@@ -52,35 +57,64 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.title {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 56px;
-    margin-bottom: 42px;
+.login-container {
+    max-width: 368px;
+    margin: 87px auto 247px auto;
+    padding: 24px;
 }
 
-.logo {
-    margin-top: 156px;
+.text-container {
+    margin: 56px 0 42px 0;
     width: 100%;
 }
 
-.footer {
-    margin-top: 247px;
+.form-container div {
+    margin-bottom: 24px;
 }
 
 .btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0 34px;
+    padding: 0 82px;
 }
 
-.btn-container button {
-    min-width: 148px;
-    max-width: 148px;
-    height: 40px;
+@media screen and (min-width: 768px) {
+    .login-container {
+        max-width: 344px;
+        margin: 156px auto 434px auto;
+        padding: 0;
+    }
+
+    .text-container {
+        margin: 40px 0;
+    }
+
+    .form-container div:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .login-container {
+        max-width: 552px;
+        margin: 36px auto 352px auto;
+    }
+
+    .text-container {
+        margin: 64px 0 72px 0;
+    }
+
+    .password-container {
+        max-width: 362px;
+        margin: 0 auto;
+    }
+
+    .form-container div:last-child {
+        margin-bottom: 32px;
+    }
+
+    .btn-container {
+        max-width: 362px;
+        padding: 0 96px;
+        margin: 0 auto;
+    }
 }
 </style>

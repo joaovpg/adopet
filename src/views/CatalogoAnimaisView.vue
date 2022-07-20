@@ -1,9 +1,11 @@
 <template>
     <HeaderComponent />
-    <div class="text-container">
-        <TextComponent text="Olá! Veja os amigos disponíveis para a adoção" />
-    </div>
-    <CardList />
+    <main class="catalogo-container">
+        <div class="text-container">
+            <TextComponent text="Olá! Veja os amigos disponíveis para a adoção" />
+        </div>
+        <CardList />
+    </main>
     <FooterComponent class="footer-container" />
 </template>
 
@@ -26,8 +28,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.catalogo-container {
+    margin: 82px 0 44px 0;
+}
+
 .text-container {
-    margin: 82px 0 32px 0;
+    margin-bottom: 32px;
     padding: 0 62px;
 }
 
@@ -36,14 +42,19 @@ export default defineComponent({
 }
 
 @media screen and (min-width: 768px) {
-    .text-container {
-        margin: 188px 0 32px 0;
+    .catalogo-container {
+        margin-top: 188px;
     }
+
 }
 
 @media screen and (min-width: 1440px) {
+    .catalogo-container {
+        margin-top: 102px;
+    }
+
     .text-container {
-        margin: 102px 0 40px 0;
+        margin-bottom: 40px;
     }
 
 }

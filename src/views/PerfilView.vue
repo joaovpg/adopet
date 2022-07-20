@@ -11,8 +11,8 @@
                     <FormComponent title="Nome" msg="Joana Magalhães" />
                     <FormComponent title="Telefone" msg="55 11 xxxxx xxxx" />
                     <FormComponent title="Cidade" msg="São Paulo" />
-                    <FormComponent :textArea="true" title="Sobre" 
-                    msg="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati." />
+                    <FormComponent :textArea="true" title="Sobre"
+                        msg="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati." />
                 </div>
                 <div class="input-area">
                     <BtnComponent class="botao" msg="Salvar" />
@@ -44,12 +44,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-.mensagem-container{
+.mensagem-container {
     max-width: 360px;
 }
 
-.text-container{
+.text-container {
     /* margin-top: 168px; */
     width: 226px;
     margin: 100px 67px auto;
@@ -64,14 +63,14 @@ export default defineComponent({
     padding: 32px 16px;
 }
 
-.form-container form{
+.form-container form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.input-container{
+.input-container {
     width: 100%;
 }
 

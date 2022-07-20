@@ -1,7 +1,7 @@
 <template>
     <header-component />
     <main class="cadastro-container">
-        <LogoComponent class="logo-component" />
+        <LogoComponent />
         <div class="text-container">
             <TextComponent text="Ainda não tem cadastro?" />
             <TextComponent text="Então, antes de buscar seu melhor amigo, precisamos de alguns dados:" />
