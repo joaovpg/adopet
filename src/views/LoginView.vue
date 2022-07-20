@@ -15,7 +15,7 @@
                         <!-- <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" /> -->
                     </div>
                     <div class="btn-container">
-                        <BtnComponent link="/animais" msg="Entrar" />
+                        <BtnComponent link="/catalogo" msg="Entrar" />
                     </div>
                 </div>
             </form>
