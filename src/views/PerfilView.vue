@@ -5,6 +5,7 @@
             <TextComponent text="Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem." />
         </div>
         <section class="form-container">
+            <h1 class="form-title">Perfil</h1>
             <form>
                 <div class="input-container">
                     <FormComponent tipoInput="perfilInput" title="Foto" />
@@ -62,6 +63,14 @@ export default defineComponent({
     background: #F7F7F7;
     border-radius: 10px;
     padding: 32px 16px;
+}
+
+.form-title {
+    color: #737380;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 600;
 }
 
 .input-container {

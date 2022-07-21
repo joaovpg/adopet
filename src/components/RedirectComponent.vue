@@ -11,7 +11,7 @@
     <div class="a-container">
         <a :href="link">{{ texto }}</a>
     </div>
-    
+
 </template>
 
 <script lang="ts">
@@ -33,8 +33,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-.a-container{
+.a-container {
     padding: 0 24px 20px;
     width: 100%;
     display: flex;
@@ -43,18 +42,17 @@ export default defineComponent({
 }
 
 a {
-
-    font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 24px;
-
-    display: flex;
-    align-items: center;
     text-align: center;
-    text-decoration-line: underline;
+    text-decoration: none;
     color: #FC7071;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) 0.5ms;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 </style>
 

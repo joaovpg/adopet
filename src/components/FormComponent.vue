@@ -9,11 +9,10 @@
         <label class="label">{{ title }}</label>
         <div class="logoPerfil">
             <a href="/#">
-                <LogoPerfilComponent :logado="true" :class="'icon-perfil'" />
+                <LogoPerfilComponent />
             </a>
-            
         </div>
-        <RedirectComponent texto="Clique na foto para editar"/>
+        <RedirectComponent texto="Clique na foto para editar" />
     </div>
 
     <div v-else class="input-container">
@@ -106,11 +105,9 @@ export default defineComponent({
     color: #BCBCBC;
 }
 
-.logoPerfil{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.logoPerfil {
+    margin: 0 auto 4px auto;
+    max-width: 80px;
+    max-height: 80px;
 }
-
 </style>

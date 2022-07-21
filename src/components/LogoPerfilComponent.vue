@@ -1,15 +1,7 @@
 <template>
-
-
-
-    <template v-if="logado === true">
-        <img :class="estilo" src="../assets/header/logado.jpg">
-    </template>
-
-    <template v-else>
-        <img :class="estilo" src="../assets/header/Usuario.png">
-    </template>
-
+    <div v-if="isLoggedIn()">
+        <img class="icon" src="../assets/header/logado.jpg">
+    </div>
 </template>
 
 <script lang="ts">
@@ -17,15 +9,13 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: 'LogoPerfilComponent',
-    props: {
-        logado: {
-            type: Boolean,
-            default: false
-        }
-    },
-    data(){
-        return{
-            estilo: 'icon'
+    methods: {
+        isLoggedIn() {
+            if (window.location.hash == '#/perfil' || window.location.hash == '#/mensagem' || window.location.hash == '#/catalogo') {
+                return true;
+            } else {
+                return false
+            }
         }
     }
 })
@@ -33,15 +23,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.icon{
-    width: 40px;
-    height: 40px;
+.icon {
     border-radius: 40px;
-}
-
-.icon-perfil{
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 100%;
 }
 </style>
