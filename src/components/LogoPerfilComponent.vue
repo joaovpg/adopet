@@ -1,11 +1,13 @@
 <template>
 
+
+
     <template v-if="logado === true">
-        <img class="icon" src="../assets/header/logado.jpg">
+        <img :class="estilo" src="../assets/header/logado.jpg">
     </template>
 
     <template v-else>
-        <img class="icon" src="../assets/header/Usuario.png">
+        <img :class="estilo" src="../assets/header/Usuario.png">
     </template>
 
 </template>
@@ -20,6 +22,11 @@ export default defineComponent({
             type: Boolean,
             default: false
         }
+    },
+    data(){
+        return{
+            estilo: 'icon'
+        }
     }
 })
 
@@ -29,6 +36,12 @@ export default defineComponent({
 .icon{
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 40px;
+}
+
+.icon-perfil{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
 }
 </style>

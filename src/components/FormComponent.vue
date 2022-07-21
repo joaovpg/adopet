@@ -1,19 +1,26 @@
 <template>
 
-    <template v-if="typeArea()">
-        <div class="input-container">
-            <label class="label">{{ title }}</label>
-            <input class="input" :type="input" :placeholder="msg">
+    <div v-if="tipoInput === 'textArea'" class="input-container">
+        <label class="label">{{ title }}</label>
+        <textarea maxlength="256" class="textarea" :placeholder="msg"></textarea>
+    </div>
 
+    <div v-else-if="tipoInput == 'perfilInput'">
+        <label class="label">{{ title }}</label>
+        <div class="logoPerfil">
+            <a href="/#">
+                <LogoPerfilComponent :logado="true" :class="'icon-perfil'" />
+            </a>
+            
         </div>
-    </template>
+        <RedirectComponent texto="Clique na foto para editar"/>
+    </div>
 
-    <template v-else>
-        <div class="input-container">
-            <label class="label">{{ title }}</label>
-            <textarea maxlength="256" class="textarea" :placeholder="msg"></textarea>
-        </div>
-    </template>
+    <div v-else class="input-container">
+        <label class="label">{{ title }}</label>
+        <input class="input" :type="input" :placeholder="msg">
+    </div>
+
 
 
 
@@ -21,9 +28,15 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import LogoPerfilComponent from "./LogoPerfilComponent.vue";
+import RedirectComponent from "./RedirectComponent.vue";
 
 export default defineComponent({
     name: 'FormComponent',
+    components: {
+        LogoPerfilComponent,
+        RedirectComponent
+    },
     props: {
         title: {
             type: String,
@@ -35,16 +48,15 @@ export default defineComponent({
         msg: {
             type: String,
         },
-        textArea: {
-            type: Boolean,
-            default: false
+        tipoInput: {
+            type: String,
         }
     },
-    methods: {
-        typeArea() {
-            return this.textArea === false
-        }
-    }
+    // methods: {
+    //     typeArea() {
+    //         return this.textArea === false
+    //     }
+    // }
 })
 
 </script>
@@ -93,4 +105,12 @@ export default defineComponent({
     font-size: 14px;
     color: #BCBCBC;
 }
+
+.logoPerfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 </style>

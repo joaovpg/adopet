@@ -7,10 +7,11 @@
         <section class="form-container">
             <form>
                 <div class="input-container">
+                    <FormComponent tipoInput="perfilInput" title="Foto" />
                     <FormComponent title="Nome" msg="Joana Magalhães" />
                     <FormComponent title="Telefone" msg="55 11 xxxxx xxxx" />
                     <FormComponent title="Cidade" msg="São Paulo" />
-                    <FormComponent :textArea="true" title="Sobre"
+                    <FormComponent tipoInput="textArea" title="Sobre"
                         msg="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati." />
                 </div>
                 <div class="btn-container">
