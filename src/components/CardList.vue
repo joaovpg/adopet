@@ -1,6 +1,7 @@
 <template>
     <div class="card-container">
-        <CardComponent :key="pet.id" :img="id" :name="name" :age="age" :type="type" :behavior="behavior" :city="city" />
+        <CardComponent v-for="pet in pets" :key="pet" img="Lua.png" name='pet.name' age="3 meses" type="Porte pequeno"
+            behavior="Agressiva" city="Rio Janeiro (RJ)" />
     </div>
 </template>
 
@@ -26,12 +27,13 @@ export default defineComponent({
     methods: {
         async listCards() {
             await axios
-                .get("http://localhost:3000/pets")
+                .get("http://localhost:3000/pets/")
                 .then((response) => {
-                    this.pets = response.data.pets
+                    this.pets = response.data
+                    console.log("Deu certo?", this.pets)
                 })
                 .catch((error) => {
-                    console.log(error)
+                    console.log("Erro: ", error)
                 })
         }
     }

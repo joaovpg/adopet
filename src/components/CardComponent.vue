@@ -49,7 +49,7 @@ export default defineComponent({
     },
     methods: {
         resolve_img_url: function (path: any) {
-            let images = require.context('../assets/animais/', false, /\.png$|\.jpg$/)
+            let images = require.context('../assets/pets/', false, /\.png$|\.jpg$/)
             return images("./" + path)
         },
     }
