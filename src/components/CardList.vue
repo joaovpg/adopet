@@ -1,41 +1,39 @@
 <template>
     <div class="card-container">
-        <CardComponent img="AnimaisLua.png" name="Lua" age="3 meses" type="Porte pequeno" behavior="Ativa e carinhosa"
-            city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisSid.png" name="Paulinha" age="2 anos" type="Porte pequeno"
-            behavior="Ativa e não carinhosa" city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisLua.png" name="Lua" age="3 meses" type="Porte pequeno" behavior="Ativa e carinhosa"
-            city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisSid.png" name="Paulinha" age="2 anos" type="Porte pequeno"
-            behavior="Ativa e não carinhosa" city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisLua.png" name="Lua" age="3 meses" type="Porte pequeno" behavior="Ativa e carinhosa"
-            city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisSid.png" name="Paulinha" age="2 anos" type="Porte pequeno"
-            behavior="Ativa e não carinhosa" city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisLua.png" name="Lua" age="3 meses" type="Porte pequeno" behavior="Ativa e carinhosa"
-            city="Rio de Janeiro(RJ)" />
-        <CardComponent img="AnimaisSid.png" name="Paulinha" age="2 anos" type="Porte pequeno"
-            behavior="Ativa e não carinhosa" city="Rio de Janeiro(RJ)" />
-
-        <CardComponent img="AnimaisLua.png" name="Lua" age="3 meses" type="Porte pequeno" behavior="Ativa e carinhosa"
-            city="Rio de Janeiro(RJ)" />
+        <CardComponent :key="pet.id" :img="id" :name="name" :age="age" :type="type" :behavior="behavior" :city="city" />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import CardComponent from "./CardComponent.vue";
+import axios from 'axios'
+
 
 export default defineComponent({
     name: 'CardList',
     components: {
         CardComponent
+    },
+    data() {
+        return {
+            pets: {},
+        }
+    },
+    mounted() {
+        this.listCards();
+    },
+    methods: {
+        async listCards() {
+            await axios
+                .get("http://localhost:3000/pets")
+                .then((response) => {
+                    this.pets = response.data.pets
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
     }
 })
 </script>
