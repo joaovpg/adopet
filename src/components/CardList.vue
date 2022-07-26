@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
-        <CardComponent v-for="pet in pets" :key="pet" img="Lua.png" name='pet.name' age="3 meses" type="Porte pequeno"
-            behavior="Agressiva" city="Rio Janeiro (RJ)" />
+        <CardComponent v-for="(item, index) in pets" :key="index" :img="item.img_address" :name="item.name"
+            :age="item.age" :type="item.type" :behavior="item.behavior" :city="item.city" />
     </div>
 </template>
 
@@ -10,7 +10,6 @@ import { defineComponent } from "vue";
 import CardComponent from "./CardComponent.vue";
 import axios from 'axios'
 
-
 export default defineComponent({
     name: 'CardList',
     components: {
@@ -18,11 +17,8 @@ export default defineComponent({
     },
     data() {
         return {
-            pets: {},
+            pets: {}
         }
-    },
-    mounted() {
-        this.listCards();
     },
     methods: {
         async listCards() {
@@ -36,6 +32,9 @@ export default defineComponent({
                     console.log("Erro: ", error)
                 })
         }
+    },
+    mounted() {
+        this.listCards();
     }
 })
 </script>

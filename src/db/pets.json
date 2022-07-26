@@ -7,7 +7,7 @@
             "type": "Porte pequeno",
             "behavior": "Ativa e carinhosa",
             "city": "Rio de Janeiro(RJ)",
-            "img_address": "@/assets/pets/Lua.png"
+            "img_address": "Lua.png"
         },
         {
             "id": 2,
@@ -16,7 +16,7 @@
             "type": "Porte pequeno",
             "behavior": "Calmo e educado",
             "city": "Rio de Janeiro(RJ)",
-            "img_address": "@/assets/pets/Dunga.png"
+            "img_address": "Dunga.png"
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@
             "type": "Porte pequeno",
             "behavior": "Ativa e carinhosa",
             "city": "Nova Iguaçu(RJ)",
-            "img_address": "@/assets/pets/Felicia.png"
+            "img_address": "Felicia.png"
         },
         {
             "id": 4,
@@ -34,7 +34,7 @@
             "type": "Porte grande",
             "behavior": "Ativo e educado",
             "city": "Duque de Caxias(RJ)",
-            "img_address": "@/assets/pets/Sirius.png"
+            "img_address": "Sirius.png"
         },
         {
             "id": 5,
@@ -43,7 +43,7 @@
             "type": "Porte pequeno",
             "behavior": "Calma e carinhosa",
             "city": "São Gonçalo(RJ)",
-            "img_address": "@/assets/pets/Fiona.png"
+            "img_address": "Fiona.png"
         },
         {
             "id": 6,
@@ -52,7 +52,7 @@
             "type": "Porte médio/grande",
             "behavior": "Brincalhão e amável",
             "city": "Rio de Janeiro(RJ)",
-            "img_address": "@/assets/pets/Sid.png"
+            "img_address": "Sid.png"
         },
         {
             "id": 6,
@@ -61,7 +61,7 @@
             "type": "Porte médio",
             "behavior": "Ativo e carinhoso",
             "city": "Nova Iguaçu(RJ)",
-            "img_address": "@/assets/pets/Yoda.png"
+            "img_address": "Yoda.png"
         },
         {
             "id": 7,
@@ -70,7 +70,7 @@
             "type": "Porte grande",
             "behavior": "Calma e carinhosa",
             "city": "São Gonçalo(RJ)",
-            "img_address": "@/assets/pets/Amora.png"
+            "img_address": "Amora.png"
         },
         {
             "id": 8,
@@ -79,7 +79,7 @@
             "type": "Porte médio",
             "behavior": "Ativa e amável",
             "city": "Rio de Janeiro(RJ)",
-            "img_address": "@/assets/pets/Zelda.png"
+            "img_address": "Zelda.png"
         }
     ]
 }
