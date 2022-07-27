@@ -1,5 +1,4 @@
 <template>
-    <HeaderComponent :usuario=true />
     <main class="mensagem-container">
         <div class="text-container">
             <TextComponent class="titulo"
@@ -20,27 +19,20 @@
         </section>
     </main>
     <BlobComponent />
-    <FooterComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import FormComponent from "@/components/FormComponent.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import BlobComponent from "@/components/BlobComponent.vue";
 
 export default defineComponent({
     name: 'MensagemView',
     components: {
         FormComponent,
         BtnComponent,
-        HeaderComponent,
         TextComponent,
-        FooterComponent,
-        BlobComponent
     }
 })
 </script>

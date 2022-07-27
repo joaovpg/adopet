@@ -1,5 +1,4 @@
 <template>
-    <HeaderComponent :usuario="true" />
     <main class="mensagem-container">
         <div class="text-container">
             <TextComponent text="Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem." />
@@ -21,28 +20,21 @@
             </form>
         </section>
     </main>
-    <BlobComponent />
-    <FooterComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import FormComponent from "@/components/FormComponent.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import BlobComponent from "@/components/BlobComponent.vue";
 
 export default defineComponent({
     name: 'PerfilView',
     components: {
         FormComponent,
         BtnComponent,
-        HeaderComponent,
         TextComponent,
-        FooterComponent,
-        BlobComponent
+
     }
 })
 </script>

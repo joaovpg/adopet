@@ -11,15 +11,6 @@
         },
         {
             "id": 2,
-            "name": "Dunga",
-            "age": "2 anos",
-            "type": "Porte pequeno",
-            "behavior": "Calmo e educado",
-            "city": "Rio de Janeiro(RJ)",
-            "img_address": "Dunga.png"
-        },
-        {
-            "id": 3,
             "name": "Felícia",
             "age": "3 meses",
             "type": "Porte pequeno",
@@ -28,7 +19,7 @@
             "img_address": "Felicia.png"
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Sirius",
             "age": "6 meses",
             "type": "Porte grande",
@@ -37,7 +28,7 @@
             "img_address": "Sirius.png"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Fiona",
             "age": "3 anos",
             "type": "Porte pequeno",
@@ -46,7 +37,7 @@
             "img_address": "Fiona.png"
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "Sid",
             "age": "8 meses",
             "type": "Porte médio/grande",
@@ -65,6 +56,15 @@
         },
         {
             "id": 7,
+            "name": "Dunga",
+            "age": "2 anos",
+            "type": "Porte pequeno",
+            "behavior": "Calmo e educado",
+            "city": "Rio de Janeiro(RJ)",
+            "img_address": "Dunga.png"
+        },
+        {
+            "id": 8,
             "name": "Amora",
             "age": "45 dias",
             "type": "Porte grande",
@@ -73,7 +73,7 @@
             "img_address": "Amora.png"
         },
         {
-            "id": 8,
+            "id": 9,
             "name": "Zelda",
             "age": "5 meses",
             "type": "Porte médio",

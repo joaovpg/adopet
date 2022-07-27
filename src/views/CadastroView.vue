@@ -1,5 +1,4 @@
 <template>
-    <header-component />
     <main class="cadastro-container">
         <LogoComponent />
         <div class="text-container">
@@ -24,17 +23,13 @@
     </main>
     <BlobComponent />
     <PawsComponent />
-    <FooterComponent class="footer" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
 import InputComponent from "@/components/InputComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import BlobComponent from "@/components/BlobComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
 import PawsComponent from "@/components/PawsComponent.vue";
 
@@ -42,12 +37,9 @@ import PawsComponent from "@/components/PawsComponent.vue";
 export default defineComponent({
     name: "CadastroView",
     components: {
-        HeaderComponent,
         InputComponent,
         BtnComponent,
         LogoComponent,
-        FooterComponent,
-        BlobComponent,
         TextComponent,
         PawsComponent
     }

@@ -1,5 +1,4 @@
 <template>
-    <header-component />
     <main class="login-container">
         <LogoComponent />
         <div class="text-container">
@@ -23,18 +22,13 @@
     </main>
     <BlobComponent />
     <PawsComponent />
-    <FooterComponent class="footer" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
 import InputComponent from "@/components/InputComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
-import BlobComponent from "@/components/BlobComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
-import RedirectComponent from "@/components/RedirectComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
 import PawsComponent from "@/components/PawsComponent.vue";
 
@@ -42,13 +36,9 @@ import PawsComponent from "@/components/PawsComponent.vue";
 export default defineComponent({
     name: "LoginView",
     components: {
-        HeaderComponent,
         InputComponent,
         BtnComponent,
         LogoComponent,
-        // RedirectComponent,
-        FooterComponent,
-        BlobComponent,
         TextComponent,
         PawsComponent
     }
