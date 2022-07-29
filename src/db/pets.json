@@ -1,37 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Lua",
-      "age": "3 meses",
-      "type": "Porte pequeno",
-      "behavior": "Ativa e carinhosa",
-      "city": "Rio de Janeiro(RJ)",
-      "img_address": "Lua.png"
-    },
-    {
-      "name": "teste",
-      "email": "teste",
-      "password": "teste",
-      "id": 2
-    },
-    {
-      "name": "teste",
-      "email": "teste",
-      "password": "teste",
-      "id": 3
-    },
-    {
-      "name": "João",
+      "name": "João Victor Pereira Gomes",
       "email": "jjoaovictorpg@gmail.com",
       "password": "123456",
-      "id": 4
-    },
-    {
-      "name": "João",
-      "email": "jjoajo@gmail.com",
-      "password": "123456",
-      "id": 5
+      "id": 1
     }
   ],
   "pets": [

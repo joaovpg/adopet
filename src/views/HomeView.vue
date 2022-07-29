@@ -2,8 +2,8 @@
   <main class="home-container">
     <HeroComponent />
     <div class="btn-container">
-      <BtnComponent link="/login" msg="Já tenho conta" />
-      <BtnComponent link="/cadastro" msg="Quero me cadastrar" />
+      <BtnComponent @click="goToLogin" msg="Já tenho conta" />
+      <BtnComponent @click="goToCadastro" msg="Quero me cadastrar" />
     </div>
     <ImageComponent class="image-container" />
   </main>
@@ -27,6 +27,16 @@ export default defineComponent({
   },
   beforeRouteLeave() {
     document.body.style.backgroundColor = '#FFF'
+  },
+  methods: {
+    goToLogin() {
+      this.$router.push('/login')
+    },
+
+    goToCadastro() {
+      this.$router.push('/cadastro')
+    }
+
   }
 });
 </script>
