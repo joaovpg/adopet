@@ -5,16 +5,17 @@
             <TextComponent text="Já tem conta? Faça seu login:" />
         </div>
         <section>
-            <form>
+            <form @submit.prevent="loginUser">
                 <div class="form-container">
-                    <InputComponent title="E-mail" msg="Insira seu email" />
+                    <InputComponent v-model="login.email" title="E-mail" msg="Insira seu email" />
                     <div class="password-container">
-                        <InputComponent title="Senha" input="password" msg="Insira seu senha" />
+                        <InputComponent v-model="login.password" title="Senha" input="password"
+                            msg="Insira seu senha" />
                         <!-- Componente Redirect em Testes -->
                         <!-- <RedirectComponent link="#/cadastro" texto="Esqueceu a senha?" /> -->
                     </div>
                     <div class="btn-container">
-                        <BtnComponent link="/catalogo" msg="Entrar" />
+                        <BtnComponent msg="Entrar" />
                     </div>
                 </div>
             </form>
@@ -31,6 +32,7 @@ import BtnComponent from "@/components/BtnComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
 import PawsComponent from "@/components/PawsComponent.vue";
+import axios from "axios";
 
 
 export default defineComponent({
@@ -41,6 +43,38 @@ export default defineComponent({
         LogoComponent,
         TextComponent,
         PawsComponent
+    },
+    data() {
+        return {
+            login: {
+                email: '',
+                password: ''
+            }
+        }
+    },
+    methods: {
+        loginUser() {
+            let emailForm = this.login.email
+            let senhaForm = this.login.password
+
+            axios.get(`http://localhost:3000/users?email=${this.login.email}`)
+                .then(response => {
+                    const login = response.data
+                    console.log(emailForm)
+                    console.log(login)
+                    if (emailForm == login.email) {
+                        if (senhaForm == login.password) {
+                            this.$router.push('/perfil')
+                        } else {
+                            alert("Senha incorreta")
+                        }
+                    } else {
+                        alert("E-mail não cadastrado")
+                    }
+                }).catch(erro => {
+                    console.log("Erro:", erro)
+                })
+        }
     }
 })
 

@@ -1,5 +1,5 @@
 <template>
-    <button @click="$router.push(link)" class="btn" type="submit">{{ msg }}</button>
+    <button class="btn" type="submit">{{ msg }}</button>
 </template>
 
 <script lang="ts">
@@ -10,7 +10,6 @@ export default defineComponent({
     props: {
         link: {
             type: String,
-            default: '/'
         },
         tamanho: {
             type: String,

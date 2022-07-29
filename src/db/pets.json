@@ -1,85 +1,120 @@
 {
-    "pets": [
-        {
-            "id": 1,
-            "name": "Lua",
-            "age": "3 meses",
-            "type": "Porte pequeno",
-            "behavior": "Ativa e carinhosa",
-            "city": "Rio de Janeiro(RJ)",
-            "img_address": "Lua.png"
-        },
-        {
-            "id": 2,
-            "name": "Felícia",
-            "age": "3 meses",
-            "type": "Porte pequeno",
-            "behavior": "Ativa e carinhosa",
-            "city": "Nova Iguaçu(RJ)",
-            "img_address": "Felicia.png"
-        },
-        {
-            "id": 3,
-            "name": "Sirius",
-            "age": "6 meses",
-            "type": "Porte grande",
-            "behavior": "Ativo e educado",
-            "city": "Duque de Caxias(RJ)",
-            "img_address": "Sirius.png"
-        },
-        {
-            "id": 4,
-            "name": "Fiona",
-            "age": "3 anos",
-            "type": "Porte pequeno",
-            "behavior": "Calma e carinhosa",
-            "city": "São Gonçalo(RJ)",
-            "img_address": "Fiona.png"
-        },
-        {
-            "id": 5,
-            "name": "Sid",
-            "age": "8 meses",
-            "type": "Porte médio/grande",
-            "behavior": "Brincalhão e amável",
-            "city": "Rio de Janeiro(RJ)",
-            "img_address": "Sid.png"
-        },
-        {
-            "id": 6,
-            "name": "Yoda",
-            "age": "1 ano",
-            "type": "Porte médio",
-            "behavior": "Ativo e carinhoso",
-            "city": "Nova Iguaçu(RJ)",
-            "img_address": "Yoda.png"
-        },
-        {
-            "id": 7,
-            "name": "Dunga",
-            "age": "2 anos",
-            "type": "Porte pequeno",
-            "behavior": "Calmo e educado",
-            "city": "Rio de Janeiro(RJ)",
-            "img_address": "Dunga.png"
-        },
-        {
-            "id": 8,
-            "name": "Amora",
-            "age": "45 dias",
-            "type": "Porte grande",
-            "behavior": "Calma e carinhosa",
-            "city": "São Gonçalo(RJ)",
-            "img_address": "Amora.png"
-        },
-        {
-            "id": 9,
-            "name": "Zelda",
-            "age": "5 meses",
-            "type": "Porte médio",
-            "behavior": "Ativa e amável",
-            "city": "Rio de Janeiro(RJ)",
-            "img_address": "Zelda.png"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Lua",
+      "age": "3 meses",
+      "type": "Porte pequeno",
+      "behavior": "Ativa e carinhosa",
+      "city": "Rio de Janeiro(RJ)",
+      "img_address": "Lua.png"
+    },
+    {
+      "name": "teste",
+      "email": "teste",
+      "password": "teste",
+      "id": 2
+    },
+    {
+      "name": "teste",
+      "email": "teste",
+      "password": "teste",
+      "id": 3
+    },
+    {
+      "name": "João",
+      "email": "jjoaovictorpg@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "João",
+      "email": "jjoajo@gmail.com",
+      "password": "123456",
+      "id": 5
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Lua",
+      "age": "3 meses",
+      "type": "Porte pequeno",
+      "behavior": "Ativa e carinhosa",
+      "city": "Rio de Janeiro(RJ)",
+      "img_address": "Lua.png"
+    },
+    {
+      "id": 2,
+      "name": "Felícia",
+      "age": "3 meses",
+      "type": "Porte pequeno",
+      "behavior": "Ativa e carinhosa",
+      "city": "Nova Iguaçu(RJ)",
+      "img_address": "Felicia.png"
+    },
+    {
+      "id": 3,
+      "name": "Sirius",
+      "age": "6 meses",
+      "type": "Porte grande",
+      "behavior": "Ativo e educado",
+      "city": "Duque de Caxias(RJ)",
+      "img_address": "Sirius.png"
+    },
+    {
+      "id": 4,
+      "name": "Fiona",
+      "age": "3 anos",
+      "type": "Porte pequeno",
+      "behavior": "Calma e carinhosa",
+      "city": "São Gonçalo(RJ)",
+      "img_address": "Fiona.png"
+    },
+    {
+      "id": 5,
+      "name": "Sid",
+      "age": "8 meses",
+      "type": "Porte médio/grande",
+      "behavior": "Brincalhão e amável",
+      "city": "Rio de Janeiro(RJ)",
+      "img_address": "Sid.png"
+    },
+    {
+      "id": 6,
+      "name": "Yoda",
+      "age": "1 ano",
+      "type": "Porte médio",
+      "behavior": "Ativo e carinhoso",
+      "city": "Nova Iguaçu(RJ)",
+      "img_address": "Yoda.png"
+    },
+    {
+      "id": 7,
+      "name": "Dunga",
+      "age": "2 anos",
+      "type": "Porte pequeno",
+      "behavior": "Calmo e educado",
+      "city": "Rio de Janeiro(RJ)",
+      "img_address": "Dunga.png"
+    },
+    {
+      "id": 8,
+      "name": "Amora",
+      "age": "45 dias",
+      "type": "Porte grande",
+      "behavior": "Calma e carinhosa",
+      "city": "São Gonçalo(RJ)",
+      "img_address": "Amora.png"
+    },
+    {
+      "id": 9,
+      "name": "Zelda",
+      "age": "5 meses",
+      "type": "Porte médio",
+      "behavior": "Ativa e amável",
+      "city": "Rio de Janeiro(RJ)",
+      "img_address": "Zelda.png"
+    }
+  ]
 }

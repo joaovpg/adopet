@@ -6,17 +6,19 @@
             <TextComponent text="Então, antes de buscar seu melhor amigo, precisamos de alguns dados:" />
         </div>
         <section class="form-container">
-            <form>
+            <form @submit.prevent="createUser">
                 <div class="input-container">
-                    <InputComponent title="Nome" msg="Digite seu nome completo" />
-                    <InputComponent title="E-mail" msg="Escolha seu melhor e-mail" />
+                    <InputComponent v-model="users.name" title="Nome" msg="Digite seu nome completo" />
+                    <InputComponent v-model="users.email" title="E-mail" msg="Escolha seu melhor e-mail" />
                     <div class="password-container">
-                        <InputComponent title="Senha" input="password" msg="Insira seu senha" />
-                        <InputComponent title="Confirma sua senha" input="password" msg="Repita a senha criada acima" />
+                        <InputComponent v-model="users.password" title="Senha" input="password"
+                            msg="Insira seu senha" />
+                        <InputComponent v-model="users.passwordConfirm" title="Confirma sua senha" input="password"
+                            msg="Repita a senha criada acima" />
                     </div>
                 </div>
                 <div class="btn-container">
-                    <BtnComponent link="/catalogo" msg="Cadastrar!" />
+                    <BtnComponent msg="Cadastrar!" />
                 </div>
             </form>
         </section>
@@ -32,6 +34,7 @@ import BtnComponent from "@/components/BtnComponent.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
 import PawsComponent from "@/components/PawsComponent.vue";
+import axios from "axios";
 
 
 export default defineComponent({
@@ -42,7 +45,42 @@ export default defineComponent({
         LogoComponent,
         TextComponent,
         PawsComponent
-    }
+    },
+    data() {
+        return {
+            users: {
+                name: '',
+                email: '',
+                password: '',
+                passwordConfirm: '',
+            }
+        }
+    },
+    methods: {
+        async createUser() {
+            let reg = new RegExp(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)
+            if (reg.test(this.users.email)) {
+                if (this.users.password == this.users.passwordConfirm) {
+                    await axios.post("http://localhost:3000/users", {
+                        name: this.users.name,
+                        email: this.users.email,
+                        password: this.users.password
+                    }).then(() => {
+                        alert("Usuário criado")
+                        this.$router.push('/perfil')
+                    }).catch(response => {
+                        console.log("Erro:", response)
+                    });
+                } else {
+                    alert("Confirmação da senha não confere")
+                }
+            } else {
+                alert("Coloque um e-mail válido")
+            }
+        }
+    },
+
+
 })
 
 </script>

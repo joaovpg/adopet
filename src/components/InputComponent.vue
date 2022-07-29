@@ -1,7 +1,8 @@
 <template>
     <div class="input-container">
         <label class="label">{{ title }}</label>
-        <input class="input" :type="input" :placeholder="msg">
+        <input class="input" :type="input" :placeholder="msg" :value="modelValue"
+            @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)">
     </div>
 </template>
 
@@ -21,6 +22,9 @@ export default defineComponent({
         msg: {
             type: String,
         },
+        modelValue: {
+            type: String
+        }
     }
 })
 
