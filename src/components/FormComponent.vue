@@ -9,7 +9,7 @@
         <label class="label">{{ title }}</label>
         <div class="logoPerfil">
             <a href="/#">
-                <LogoPerfilComponent />
+                <LogoPerfilComponent img="Usuario.png" />
             </a>
         </div>
         <RedirectComponent texto="Clique na foto para editar" />
@@ -51,11 +51,6 @@ export default defineComponent({
             type: String,
         }
     },
-    // methods: {
-    //     typeArea() {
-    //         return this.textArea === false
-    //     }
-    // }
 })
 
 </script>

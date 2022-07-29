@@ -67,7 +67,8 @@ export default defineComponent({
                         password: this.users.password,
                         phone: '',
                         city: '',
-                        about: ''
+                        about: '',
+                        imgPerfil: '',
                     }).then(() => {
                         alert("Usuário criado")
                         this.$router.push('/login')

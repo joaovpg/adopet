@@ -1,6 +1,6 @@
 <template>
     <div v-if="isLoggedIn()">
-        <img class="icon" src="../assets/header/logado.jpg">
+        <img class="icon" :src="resolve_img_url(img)">
     </div>
 </template>
 
@@ -9,6 +9,12 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: 'LogoPerfilComponent',
+    props: {
+        img: {
+            type: String,
+            default: 'Usuario.png',
+        },
+    },
     methods: {
         isLoggedIn() {
             if (window.location.hash == '#/perfil' || window.location.hash == '#/mensagem' || window.location.hash == '#/catalogo') {
@@ -16,6 +22,10 @@ export default defineComponent({
             } else {
                 return false
             }
+        },
+        resolve_img_url: function (path: any) {
+            let images = require.context('../assets/users_icon/', false, /\.png$|\.jpg$/)
+            return images("./" + path)
         }
     }
 })

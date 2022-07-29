@@ -14,12 +14,7 @@
                 </a>
             </div>
             <div class="login-icon">
-                <!-- <a href="#" :style="{ display: isLoggedIn }">
-                    <img class="login-icon" src="@/assets/header/Usuario.png">
-                </a> -->
-                <div v-if="isLoggedIn()">
-                    <LogoPerfilComponent :logado=false />
-                </div>
+                <LogoPerfilComponent img="Usuario.png" />
             </div>
         </nav>
     </header>
@@ -37,22 +32,8 @@ export default defineComponent({
     props: {
         usuario: {
             type: Boolean,
-
         }
     },
-    computed: {
-
-    },
-    methods: {
-        isLoggedIn() {
-            if (window.location.hash == '#/catalogo' || window.location.hash == '#/perfil') {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-
 });
 </script>
 
@@ -67,8 +48,6 @@ export default defineComponent({
     background-repeat: no-repeat;
     z-index: -1;
 }
-
-.header-container {}
 
 nav {
     display: flex;
