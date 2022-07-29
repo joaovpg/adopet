@@ -1,9 +1,12 @@
 {
   "users": [
     {
-      "name": "João Victor Pereira Gomes",
+      "name": "João Victor",
       "email": "jjoaovictorpg@gmail.com",
       "password": "123456",
+      "phone": "",
+      "city": "",
+      "about": "",
       "id": 1
     }
   ],

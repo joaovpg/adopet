@@ -1,11 +1,11 @@
 <template>
   <HeaderComponent />
   <router-view />
-  <FooterComponent />
   <BlobComponent />
+  <FooterComponent />
 </template>
 
-  <script lang="ts">
+<script lang="ts">
 import HeaderComponent from "./components/HeaderComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import BlobComponent from "./components/BlobComponent.vue";
@@ -17,13 +17,12 @@ export default ({
     BlobComponent
   }
 })
-
 </script>
   <style>
   /* http://meyerweb.com/eric/tools/css/reset/ 
-     v2.0 | 20110126
-     License: none (public domain)
-  */
+           v2.0 | 20110126
+           License: none (public domain)
+        */
   
   * {
     box-sizing: border-box;

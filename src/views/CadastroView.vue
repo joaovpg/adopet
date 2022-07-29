@@ -64,7 +64,10 @@ export default defineComponent({
                     await axios.post("http://localhost:3000/users", {
                         name: this.users.name,
                         email: this.users.email,
-                        password: this.users.password
+                        password: this.users.password,
+                        phone: '',
+                        city: '',
+                        about: ''
                     }).then(() => {
                         alert("Usuário criado")
                         this.$router.push('/login')

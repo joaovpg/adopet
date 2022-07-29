@@ -69,7 +69,7 @@ export default defineComponent({
 
 .image-container {
   margin-top: 24px;
-  margin-bottom: -45px;
+  margin-bottom: -150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -91,7 +91,7 @@ export default defineComponent({
 
   .image-container {
     margin-top: 40px;
-    margin-bottom: -45px;
+    margin-bottom: -150px;
   }
 }
 
@@ -99,7 +99,7 @@ export default defineComponent({
   .home-container {
     width: 488px;
     padding: 0;
-    margin: 36px auto -30px;
+    margin: 36px auto -150px;
   }
 
   .btn-container {

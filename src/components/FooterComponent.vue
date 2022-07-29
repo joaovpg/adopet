@@ -13,6 +13,7 @@ export default defineComponent({
 
 <style scoped>
 .container {
+    margin-top: 100px;
     position: relative;
     background-color: #36D6AD;
     padding: 40px;

@@ -9,7 +9,7 @@
                 <a href="#" class="nav-icons">
                     <img src="@/assets/header/Casa.svg">
                 </a>
-                <a href="#" class="nav-icons">
+                <a href="#/mensagem" class="nav-icons">
                     <img src="@/assets/header/Mensagens.svg">
                 </a>
             </div>
@@ -17,13 +17,9 @@
                 <!-- <a href="#" :style="{ display: isLoggedIn }">
                     <img class="login-icon" src="@/assets/header/Usuario.png">
                 </a> -->
-                <div v-if="userLogin()">
+                <div v-if="isLoggedIn()">
                     <LogoPerfilComponent :logado=false />
                 </div>
-                  <div v-else>
-                    <LogoPerfilComponent :logado=true />
-                </div>
-                    
             </div>
         </nav>
     </header>
@@ -41,24 +37,22 @@ export default defineComponent({
     props: {
         usuario: {
             type: Boolean,
-            
+
         }
     },
     computed: {
+
+    },
+    methods: {
         isLoggedIn() {
-            if (window.location.hash == '#/catalogo') {
-                return 'block';
+            if (window.location.hash == '#/catalogo' || window.location.hash == '#/perfil') {
+                return true;
             } else {
-                return 'none';
+                return false;
             }
         }
-    },
-     methods: {
-        userLogin() {
-            return this.usuario === false
-        }
     }
-   
+
 });
 </script>
 
@@ -105,7 +99,7 @@ nav {
 
 .login-icon {
     width: 40px;
-    
+
 }
 
 @media screen and (min-width: 768px) {
