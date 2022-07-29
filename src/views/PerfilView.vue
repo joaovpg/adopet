@@ -27,6 +27,7 @@ import { defineComponent } from "vue";
 import FormComponent from "@/components/FormComponent.vue";
 import BtnComponent from "@/components/BtnComponent.vue";
 import TextComponent from "@/components/TextComponent.vue";
+import axios from "axios";
 
 export default defineComponent({
     name: 'PerfilView',
@@ -34,6 +35,19 @@ export default defineComponent({
         FormComponent,
         BtnComponent,
         TextComponent,
+
+    },
+    data() {
+        return {
+            user: {
+                name: '',
+                phone: '',
+                city: '',
+                about: ''
+            }
+        }
+    },
+    methods: {
 
     }
 })

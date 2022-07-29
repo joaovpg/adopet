@@ -54,24 +54,18 @@ export default defineComponent({
     },
     methods: {
         loginUser() {
-            let emailForm = this.login.email
-            let senhaForm = this.login.password
-
             axios.get(`http://localhost:3000/users?email=${this.login.email}`)
                 .then(response => {
-                    const login = response.data
-                    console.log(emailForm)
-                    console.log(login)
-                    if (emailForm == login.email) {
-                        if (senhaForm == login.password) {
-                            this.$router.push('/perfil')
-                        } else {
-                            alert("Senha incorreta")
-                        }
+                    let login = response.data
+                    let senhaForm = this.login.password
+                    if (senhaForm == login[0].password) {
+                        alert("Fazendo login")
+                        this.$router.push(`/perfil?email=${this.login.email}`)
                     } else {
-                        alert("E-mail não cadastrado")
+                        alert("Senha incorreta")
                     }
                 }).catch(erro => {
+                    alert("E-mail não cadastrado")
                     console.log("Erro:", erro)
                 })
         }
