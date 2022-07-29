@@ -60,7 +60,7 @@ export default defineComponent({
                     let senhaForm = this.login.password
                     if (senhaForm == login[0].password) {
                         alert("Fazendo login")
-                        this.$router.push(`/perfil?email=${this.login.email}`)
+                        this.$router.push(`/catalogo`)
                     } else {
                         alert("Senha incorreta")
                     }
